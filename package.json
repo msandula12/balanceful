@@ -1,0 +1,41 @@
+{
+  "name": "balanceful",
+  "version": "1.0.0",
+  "description": "App for balancing your budget",
+  "main": "server.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "client-install": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\"  \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Sandula",
+  "license": "MIT",
+  "dependencies": {
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.9.5",
+    "@types/react": "^16.8.5",
+    "@types/react-dom": "^16.8.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.10",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "typescript": "^3.3.3333",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "engines": {
+    "node": "10.15.0"
+  }
+}
